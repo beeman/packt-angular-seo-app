@@ -8,6 +8,8 @@ import { PostsService } from './services/posts.service';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { ProfileItemComponent } from './components/profile-item/profile-item.component';
+import { PostsResolver } from './resolvers/posts-resolver'
+import { ProfileResolver } from './resolvers/profile-resolver'
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { ProfileItemComponent } from './components/profile-item/profile-item.com
     PostsRoutingModule
   ],
   declarations: [PostsComponent, ProfileComponent, PostListComponent, PostItemComponent, ProfileItemComponent],
-  providers: [PostsService]
+  providers: [PostsService, PostsResolver, ProfileResolver]
 })
 export class PostsModule { }

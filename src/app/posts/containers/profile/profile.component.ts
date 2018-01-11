@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,11 +9,12 @@ import { PostsService } from '../../services/posts.service';
   styles: []
 })
 export class ProfileComponent implements OnInit {
-  public profile = { id: null };
-  constructor(private postsService: PostsService, private route:ActivatedRoute) { }
+  public profile: any;
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.postsService.getProfile(this.route.snapshot.params['profileId'])
+    this.route.data
+      .map(data => data['profile'])
       .subscribe((result: any) => this.profile = result)
   }
 
