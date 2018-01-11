@@ -5,7 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "npm run build:browser && npm run build:server",
+    "build:browser": "ng build --prod --app browser",
+    "build:server": "ng build --prod --app server --output-hashing=false", 
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
