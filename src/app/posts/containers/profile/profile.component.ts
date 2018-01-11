@@ -5,9 +5,7 @@ import { PostsService } from '../../services/posts.service';
 @Component({
   selector: 'app-profile',
   template: `
-    <p>
-      {{profile.id}}
-    </p>
+    <app-profile-item [profile]="profile"></app-profile-item>
   `,
   styles: []
 })

@@ -4,11 +4,7 @@ import { PostsService } from '../../services/posts.service';
 @Component({
   selector: 'app-posts',
   template: `
-    <div *ngFor="let post of posts">
-      <a [routerLink]="post.id">
-        {{post.text}}
-      </a>
-    </div>
+    <app-post-list [posts]="posts"></app-post-list>
   `,
   styles: []
 })
@@ -18,7 +14,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit() {
     this.postsService.getPosts()
-      .map(res => res.items)
+      .map((res: any) => res.items)
       .subscribe((result: any) => this.posts = result)
   }
 
