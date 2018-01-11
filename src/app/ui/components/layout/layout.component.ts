@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     <div class="container my-5">
       <router-outlet></router-outlet>
     </div>
-    app-footer placeholder
+    <app-footer></app-footer>
   `,
   styles: []
 })

@@ -4,12 +4,13 @@ import { RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
   ],
-  declarations: [LayoutComponent, HeaderComponent]
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent]
 })
 export class UiModule { }
